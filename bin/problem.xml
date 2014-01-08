@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<problem>
+	<operators>
+		<operator template="Move(disk,src,dst)">
+			<preconditions>
+				<precondition value="Clear(disk)"/>
+				<precondition value="On(disk,src)"/>
+				<precondition value="Clear(dst)"/>
+				<precondition value="Smaller(disk,dst)"/>
+			</preconditions>
+			<effects>
+				<effect value="On(disk,dst)"/>
+				<effect value="!On(disk,src)"/>
+				<effect value="!Clear(dst)"/>
+				<effect value="Clear(src)"/>						
+			</effects>
+		</operator>
+	</operators>
+	<objects>
+		<object value="P1"/>
+		<object value="P2"/>
+    	<object value="P3"/>				
+	</objects>
+	<initState>
+	</initState>
+	<endState>
+	</endState>
+</problem>
+
+
